@@ -8,7 +8,8 @@ const colors = [
   "purple",
   "orange",
   "white",
-  "pink"
+  "pink",
+  "yellow"
 ];
 
 changeColor.addEventListener("click", () => {
