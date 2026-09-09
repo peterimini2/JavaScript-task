@@ -12,7 +12,6 @@ const payBtn = document.querySelector(".pay-btn");
 
 billAmount.addEventListener("input", () => {
   
-
   displayBill.textContent = `Bill: $${billAmount.value}`;
   if (billAmount.value === "") {
     displayBill.textContent = "Bill: $0";
@@ -35,7 +34,13 @@ tipPercent.addEventListener("input", () => {
 
 payBtn.addEventListener("click", () => {
   const grandTotal = calculateTotal();
-  alert(`$${grandTotal} paid successfully`)
+
+  if (grandTotal === 0) {
+    alert("Please enter amount")
+  } else {
+    alert(`$${grandTotal} paid successfully`)
+  }
+  
 });
 
 
