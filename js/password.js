@@ -1,21 +1,12 @@
-import { characterPool } from "./password-characters.js";
+import {
+  characterPool, uppercase, lowercase, numbers,
+  symbols, uppercaseCheckbox, lowercaseCheckbox, 
+  numbersCheckbox, symbolsCheckbox, newPassword,
+  characterLength, generatePasswordBtn
+} from "./password-characters.js";
+ 
+
 let characterList = "";
-
-const uppercase = characterPool.uppercase;
-const lowercase = characterPool.lowercase;
-const numbers = characterPool.numbers;
-const symbols = characterPool.symbols;
-
-const uppercaseCheckbox = document.getElementById("character1");
-const lowercaseCheckbox = document.getElementById("character2");
-const numbersCheckbox = document.getElementById("character3");
-const symbolsCheckbox = document.getElementById("character4");
-
-const newPassword = document.querySelector(".new-password");
-
-const characterLength = document.querySelector(".character-length");
-
-const generatePasswordBtn = document.querySelector(".generate-password");
 
 uppercaseCheckbox.addEventListener("change", () => {
   if (uppercaseCheckbox.checked) {
