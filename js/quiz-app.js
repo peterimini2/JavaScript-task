@@ -118,5 +118,5 @@ startBtn.addEventListener("click", () => {
 
       nextBtn.remove();
     }
-  });
+  }); 
 });
